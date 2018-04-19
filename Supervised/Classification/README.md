@@ -2,4 +2,4 @@
 This implementation done on iris dataset with tolat 150 samples divided into 80% training and 20% test dataset. Accuracy of 
 this model observred with various values of hyperparameter.
 
-![](MachineLearning/Supervised/Classification/knn.png)
+![](https://github.com/mymultiverse/MachineLearning/blob/master/Supervised/Classification/knn.png)

@@ -53,12 +53,13 @@ fig = plt.subplots()
 
 sns.set()
 g = sns.lmplot(x="x1", y="x2", hue="class", data=df, fit_reg=False,  scatter_kws={"marker": "D","s": 70})
-sns.regplot(fitx[:,0],fitx[:,1], scatter=False, ax=g.axes[0, 0],ci=None)
+sns.regplot(fitx[:,0],fitx[:,1], scatter=False,line_kws={"color": "red"},ax=g.axes[0, 0],ci=None)
+plt.title('Linear Discriminant Analysis')
 
 #using sklearn
 X = np.array([[4, 1],[2, 4],[2, 3],[3, 6],[4, 4],[9,10],[6, 8],[9, 5],[8, 7],[10, 8]])
 Y = np.array([1,1,1,1,1,2,2,2,2,2])
-clf = LinearDiscriminantAnalysis()
+clf = LinearDiscriminantAnalysis() #oject of model
 
 clf.fit(X, Y)
 

@@ -69,53 +69,63 @@ z = z.reshape(x.shape)
 ax.plot_surface(x,y,z,color='c',label='Vir')
 
 
-# distribution plot for other two features
-# S_mux01 = np.mean(Setosa[:,2:],axis=0)
-# S_sigmax01 = np.std(Setosa[:,2:],axis=0)
-# S_cov = np.diag(S_sigmax01**2)
-
-# Ver_mux01 = np.mean(Versicolour[:,2:],axis=0)
-# Ver_sigmax01 = np.std(Versicolour[:,2:],axis=0)
-# Ver_cov = np.diag(Ver_sigmax01**2)
+plt.xlabel('Petal length')
+plt.ylabel('Petal width')
+plt.title('Learned Gaussian Distributions')
 
 
-# Vir_mux01 = np.mean(Virginica[:,2:],axis=0)
-# Vir_sigmax01 = np.std(Virginica[:,2:],axis=0)
-# Vir_cov = np.diag(Vir_sigmax01**2)
+#Probabilty distributions for Sepal features
+fig2 = plt.figure()
+ax = fig2.add_subplot(1, 1, 1, projection='3d')
 
-# x= np.sort(Setosa[:,2])
-# y= np.sort(Setosa[:,3])
-# x, y = np.meshgrid(x,y)
-# # Need an (N, 2) array of (x, y) pairs.
-# xy = np.column_stack([x.flat, y.flat])
+S_mux01 = np.mean(Setosa[:,:2],axis=0)
+S_sigmax01 = np.std(Setosa[:,:2],axis=0)
+S_cov = np.diag(S_sigmax01**2)
 
-# xy = np.column_stack([x.flat, y.flat])
-# z = multivariate_normal.pdf(xy, mean=S_mux01, cov=S_cov)
-# z = z.reshape(x.shape)
-# ax.plot_surface(x,y,z,color='m',label='Setosa')
+Ver_mux01 = np.mean(Versicolour[:,:2],axis=0)
+Ver_sigmax01 = np.std(Versicolour[:,:2],axis=0)
+Ver_cov = np.diag(Ver_sigmax01**2)
 
-# x= np.sort(Versicolour[:,2])
-# y= np.sort(Versicolour[:,3])
-# x, y = np.meshgrid(x,y)
-# xy = np.column_stack([x.flat, y.flat])
+Vir_mux01 = np.mean(Virginica[:,:2],axis=0)
+Vir_sigmax01 = np.std(Virginica[:,:2],axis=0)
+Vir_cov = np.diag(Vir_sigmax01**2)
 
-# xy = np.column_stack([x.flat, y.flat])
-# z = multivariate_normal.pdf(xy, mean=Ver_mux01, cov=Ver_cov)
-# z = z.reshape(x.shape)
-# ax.plot_surface(x,y,z, color='r',label='Ver')
+x= np.sort(Setosa[:,0])
+y= np.sort(Setosa[:,1])
+x, y = np.meshgrid(x,y)
+# Need an (N, 2) array of (x, y) pairs.
+xy = np.column_stack([x.flat, y.flat])
+
+xy = np.column_stack([x.flat, y.flat])
+z = multivariate_normal.pdf(xy, mean=S_mux01, cov=S_cov)
+z = z.reshape(x.shape)
+ax.plot_surface(x,y,z,color='m',label='Setosa')
 
 
-# x= np.sort(Virginica[:,2])
-# y= np.sort(Virginica[:,3])
-# x, y = np.meshgrid(x,y)
-# xy = np.column_stack([x.flat, y.flat])
+x= np.sort(Versicolour[:,0])
+y= np.sort(Versicolour[:,1])
+x, y = np.meshgrid(x,y)
+xy = np.column_stack([x.flat, y.flat])
 
-# xy = np.column_stack([x.flat, y.flat])
-# z = multivariate_normal.pdf(xy, mean=Vir_mux01, cov=Vir_cov)
-# z = z.reshape(x.shape)
-# ax.plot_surface(x,y,z,color='c',label='Vir')
+xy = np.column_stack([x.flat, y.flat])
+z = multivariate_normal.pdf(xy, mean=Ver_mux01, cov=Ver_cov)
+z = z.reshape(x.shape)
+ax.plot_surface(x,y,z, color='r',label='Ver')
 
-plt.xlabel('sepal length')
-plt.ylabel('sepal width')
+
+x= np.sort(Virginica[:,0])
+y= np.sort(Virginica[:,1])
+x, y = np.meshgrid(x,y)
+xy = np.column_stack([x.flat, y.flat])
+
+xy = np.column_stack([x.flat, y.flat])
+z = multivariate_normal.pdf(xy, mean=Vir_mux01, cov=Vir_cov)
+z = z.reshape(x.shape)
+ax.plot_surface(x,y,z,color='c',label='Vir')
+
+
+plt.xlabel('Sepal length')
+plt.ylabel('Sepal width')
 plt.title('Learned Gaussian Distributions')
 plt.show()
+

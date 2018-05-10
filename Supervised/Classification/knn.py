@@ -3,7 +3,6 @@ from sklearn import datasets
 import numpy as np
 
 iris = datasets.load_iris()
-digits = datasets.load_digits()
 
 #saperating train and test dataset
 Train_X = iris.data[:120,:]

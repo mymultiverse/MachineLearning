@@ -1,6 +1,7 @@
 # Generative Models
 ### NAÏVE BAYES
 Using bayes rule and finding stocastic model for each class assuming independent features. Mean and variances used to fit the gaussian distribution to each class. Plot below shows the probabilty distributsions with respect to two features of iris dataset.
+![](https://github.com/mymultiverse/MachineLearning/blob/master/Supervised/Classification/nb.png)
 
 
 

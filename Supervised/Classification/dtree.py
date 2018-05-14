@@ -4,15 +4,16 @@ from sklearn.datasets import load_iris
 from sklearn import tree
 import graphviz
 
-
 iris = load_iris()
-cf = tree.DecisionTreeClassifier()
-cf = cf.fit(iris.data, iris.target)
-# tree generation considering all features 
-dot_data = tree.export_graphviz(cf, out_file=None) 
-graph = graphviz.Source(dot_data) 
-graph.render("decision Tree for iris dataset")
+model = tree.DecisionTreeClassifier()
+model = model.fit(iris.data, iris.target)
 
+# tree generation considering all features 
+dot_data = tree.export_graphviz(model, out_file=None) 
+graph = graphviz.Source(dot_data) 
+graph.render("Decision Tree for iris dataset")
+
+model.predict(iris.data)
 
 # analysis considering two features 
 labels = 3
@@ -21,7 +22,7 @@ plot_step = 0.02
 
 for index, features in enumerate([[0, 1], [0, 2], [0, 3],
                                 [1, 2], [1, 3], [2, 3]]):
-    # for visialise in 2d taking only 2 feature at onece
+    # for visualise in 2d taking only 2 feature at once
     #for taining, prediction and plot
 
     X = iris.data[:, features]

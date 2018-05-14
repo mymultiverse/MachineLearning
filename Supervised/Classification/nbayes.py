@@ -14,7 +14,7 @@ model.predict(iris.data)
 
 accuracy = model.score(iris.data,iris.target)
 print(accuracy)
-
+# deviding dataset 
 Setosa = iris.data[:50,:]
 Versicolour = iris.data[50:100,:]
 Virginica = iris.data[100:,:]
@@ -22,6 +22,7 @@ Virginica = iris.data[100:,:]
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1, projection='3d')
 
+#making prob. distribustion for each class for plot
 S_mux01 = np.mean(Setosa[:,:2],axis=0)
 S_sigmax01 = np.std(Setosa[:,:2],axis=0)
 S_cov = np.diag(S_sigmax01**2)
@@ -93,7 +94,7 @@ Vir_cov = np.diag(Vir_sigmax01**2)
 x= np.sort(Setosa[:,0])
 y= np.sort(Setosa[:,1])
 x, y = np.meshgrid(x,y)
-# Need an (N, 2) array of (x, y) pairs.
+
 xy = np.column_stack([x.flat, y.flat])
 
 xy = np.column_stack([x.flat, y.flat])

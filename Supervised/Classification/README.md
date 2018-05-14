@@ -23,4 +23,7 @@ Using sklearn for fitting and predincting data
 ![](https://github.com/mymultiverse/MachineLearning/blob/master/Supervised/Classification/sklda.png "title-2")
 
 
+#### Reference
+[Sklearn](http://scikit-learn.org/stable/index.html)
+
 

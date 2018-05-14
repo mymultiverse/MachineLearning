@@ -25,8 +25,20 @@ this model observred with various values of hyperparameter. In this case the opt
 Using sklearn for fitting and predincting data
 ![](https://github.com/mymultiverse/MachineLearning/blob/master/Supervised/Classification/sklda.png "title-2")
 
+## Dependencies
+* Python Packages
+  * Numpy
+  * Matplotlib
+  * Sklearn
+  * GraphViz
+  * mpl_toolkits
+  * scipy
+  * pandas
+  * seaborn
+
 
 #### Reference
 [Sklearn](http://scikit-learn.org/stable/index.html)
+
 
 

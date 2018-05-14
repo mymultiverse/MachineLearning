@@ -14,7 +14,7 @@ model.predict(iris.data)
 
 accuracy = model.score(iris.data,iris.target)
 print(accuracy)
-# deviding dataset 
+# dividing dataset 
 Setosa = iris.data[:50,:]
 Versicolour = iris.data[50:100,:]
 Virginica = iris.data[100:,:]
@@ -22,7 +22,7 @@ Virginica = iris.data[100:,:]
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1, projection='3d')
 
-#making prob. distribustion for each class for plot
+#making prob. distribution for each class for plot
 S_mux01 = np.mean(Setosa[:,:2],axis=0)
 S_sigmax01 = np.std(Setosa[:,:2],axis=0)
 S_cov = np.diag(S_sigmax01**2)
@@ -75,7 +75,7 @@ plt.ylabel('Petal width')
 plt.title('Learned Gaussian Distributions')
 
 
-#Probabilty distributions for Sepal features
+#Probability distributions for Sepal features
 fig2 = plt.figure()
 ax = fig2.add_subplot(1, 1, 1, projection='3d')
 

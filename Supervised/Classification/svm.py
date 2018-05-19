@@ -2,9 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import svm
 from sklearn import datasets
-from scipy.stats import multivariate_normal
-from mpl_toolkits.mplot3d import Axes3D
-
 
 iris = datasets.load_iris()
 k_list = ['linear','poly','rbf','sigmoid']
@@ -12,8 +9,6 @@ accuracy = {}
 labels = 3
 plot_colors = "ryb"
 plot_step = 0.02
-
-
 
 for k_fun in k_list:
     model = svm.SVC(kernel=k_fun)

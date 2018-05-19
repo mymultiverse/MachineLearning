@@ -24,7 +24,7 @@ for k_fun in k_list:
     plt.figure()
     for index, features in enumerate([[0, 1], [0, 2], [0, 3],
                                 [1, 2], [1, 3], [2, 3]]):
-    # for visialise in 2d taking only 2 feature at onece
+    # for visualise in 2d taking only 2 feature at once
     #for taining, prediction and plot
 
         X = iris.data[:, features]

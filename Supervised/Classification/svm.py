@@ -20,8 +20,7 @@ for k_fun in k_list:
     model.fit(iris.data, iris.target)
     model.predict(iris.data)
     accuracy[k_fun] = model.score(iris.data,iris.target)
-    print(accuracy)
-
+    
     plt.figure()
     for index, features in enumerate([[0, 1], [0, 2], [0, 3],
                                 [1, 2], [1, 3], [2, 3]]):
@@ -59,6 +58,6 @@ for k_fun in k_list:
     plt.legend(loc='lower right', borderpad=0, handletextpad=0)
     plt.axis("tight")
 
-
+print(accuracy)
 plt.show()
 

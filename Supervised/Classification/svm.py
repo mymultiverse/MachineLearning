@@ -55,7 +55,7 @@ for k_fun in k_list:
             plt.scatter(X[idx, 0], X[idx, 1], c=color, label=iris.target_names[i],
                         cmap=plt.cm.RdYlBu, edgecolor='black', s=15)
 
-    plt.suptitle("Decision surface of a decision tree using two features")
+    plt.suptitle("Decision Boundary for SVM using two features")
     plt.legend(loc='lower right', borderpad=0, handletextpad=0)
     plt.axis("tight")
 

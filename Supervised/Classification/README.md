@@ -10,6 +10,23 @@ Petal Dimentsions
 
 
 # Discriminative Models
+### Support Vector Machines
+SVM classification model with different kernel function. Accuracy for iris dataset 
+```
+{'rbf': 0.9866666666666667, 'linear': 0.9933333333333333, 'poly': 0.98, 'sigmoid': 0.04}
+```
+Radial basis function
+![](https://github.com/mymultiverse/MachineLearning/blob/master/Supervised/Classification/svm_rbf.png)
+
+Linear
+![linear](https://github.com/mymultiverse/MachineLearning/blob/master/Supervised/Classification/svm_lin.png)
+
+Polynomial
+![poly](https://github.com/mymultiverse/MachineLearning/blob/master/Supervised/Classification/svm_poly.png)
+
+Sigmoid
+![sigmoid](https://github.com/mymultiverse/MachineLearning/blob/master/Supervised/Classification/svm_sigmoid.png)
+
 ### Decision Tree
 ![](https://github.com/mymultiverse/MachineLearning/blob/master/Supervised/Classification/dtree.png)
 

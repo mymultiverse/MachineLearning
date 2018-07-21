@@ -1,4 +1,6 @@
 import numpy as np
+import tensorflow as tf
+
 
 def Qnet(s,a):
   

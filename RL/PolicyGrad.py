@@ -1,5 +1,4 @@
 import numpy as np
-import numpy as np
 import tensorflow as tf
 
 class policy_grad:
